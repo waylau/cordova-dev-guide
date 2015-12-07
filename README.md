@@ -4,11 +4,7 @@
 
 Apache Cordova Development Guide helps people to learn Cordova step by step with a large number of samples.
 
-[Apache Cordova](<http://cordova.apache.org/>) has many features including :
-
-* Mobile apps with HTML, CSS & JS
-* Target multiple platforms with one code base
-* Free and open source
+[Apache Cordova](<http://cordova.apache.org/>) is an open-source mobile development framework. It allows you to use standard web technologies such as HTML5, CSS3, and JavaScript for cross-platform development, avoiding each mobile platforms' native development language. Applications execute within wrappers targeted to each platform, and rely on standards-compliant API bindings to access each device's sensors, data, and network status.
 
 There is also a GitBook version of the book: <http://waylau.gitbooks.io/cordova-dev-guide>.
 Let's [READ](SUMMARY.md)!
