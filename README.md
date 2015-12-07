@@ -24,7 +24,7 @@ Apache Cordova 是跨平台应用开发解决方案，包括：
 本书业余时间所著，水平有限、时间紧张，难免疏漏，欢迎指正，[点此](https://github.com/waylau/cordova-dev-guide/issues)提问。感谢您的参与！
 
 书中所有实例，在<https://github.com/waylau/cordova-dev-guide> 的 `samples` 目录下。
-从[目录](SUMMARY.md)开始阅读吧！
+从[目录](SUMMARY.md)开始阅读吧！另外有 GitBook 的版本方便阅读 <http://waylau.gitbooks.io/cordova-dev-guide>。
 
 ###Contact 联系作者:
 
