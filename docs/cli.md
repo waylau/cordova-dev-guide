@@ -51,7 +51,7 @@ $ cordova create hello com.waylau.cordova.hello HelloWorld
 
 第一个参数 `hello` 指定你的项目要生成的一个目录。这个目录原来不存在，Cordova  会为您创建它。其子目录 `www` 容纳您的应用程序的主页，以及在`css`，`js`和`img`的各种资源，遵循共同的 Web 开发文件命名约定。这些资源将被存储在设备上的本地文件系统，而不是在远程服务上。该`config.xml`文件中包含有需要生成和分发应用程序的重要元数据。
 
-第二个参数输入 `com.waylau.cordova.hello` 提供了一个项目的反向域名风格的标识。此参数是可选的，但前提是你还必须省略第三个参数。您可以之后在`config.xml`文件编辑这个值，但建议您一开始就选择合适的值，因为 `config.xml` 生产代码会用到这个值，就像 Java 的包名一样。若不设置此值，则默认值是`io.cordova.hellocordova`。
+第二个参数输入 `com.waylau.cordova.hello` 提供了一个项目的反向域名风格的标识。此参数是可选的，如果省略该参数，则必须省略第三个参数。您可以之后在`config.xml`文件编辑这个值，但建议您一开始就选择合适的值，因为 `config.xml` 生产代码会用到这个值，就像 Java 的包名一样。若不设置此值，则默认值是`io.cordova.hellocordova`。
 
 第三个参数的 HelloWorld 提供了应用程序的显示标题。此参数是可选的。您可以之后在`config.xml`文件编辑这个值，但建议您一开始就选择合适的值，因为 `config.xml` 生产代码会用到这个值，就像 Java 的包名一样。若不设置此值，则默认值是`io.cordova.hellocordova`。默认值是 `HelloCordova` 。
 
@@ -409,3 +409,7 @@ $ cordova platform update android
 $ cordova platform update ios
 ...etc.
 ```
+
+## 源码
+
+* 本文所用源码，见 <https://github.com/waylau/cordova-dev-guide> 的`samples` 目录下 `hello`
