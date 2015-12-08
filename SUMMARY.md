@@ -7,7 +7,7 @@ This is the summary of my book.
 * [命令行界面（CLI）](docs/cli.md)
 * [平台支持](docs/support.md)
 * [平台开发指南](docs/platforms.md)
-* [嵌入 WebViews](../docs/webviews.md)
-* [插件开发指南](../docs/hybrid-plugins.md)
-* [使用 Plugman 来管理插件](../docs/plugman.md)
+* [嵌入 WebViews](docs/webviews.md)
+* [插件开发指南](docs/hybrid-plugins.md)
+* [使用 Plugman 来管理插件](docs/plugman.md)
 * To be continued ...未完待续...

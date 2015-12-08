@@ -333,4 +333,79 @@ $ cordova plugin add ../my_plugin_dir
 
 ## 使用 merges 自定义每个平台
 
+虽然 Cordova 让您可以轻松地部署应用程序在许多不同的平台上，有时你需要添加一些自定义功能。在这种情况下，你不希望修改各种`platforms`目录下的 `www` 目录中的源文件，因为他们经常会被顶级`www`目录的跨平台源所取代。
 
+取而代之的是，顶层`merges`目录提供指定资源来部署在特定平台上的地方。`merges`镜像中的每个特定平台的子目录反映了`www`源代码树的目录结构，使您能够覆盖或根据需要添加文件。例如，下面演示了如何使用`merges`以提高 Android 和Amazon Fire OS 设备的默认字体大小：
+
+* 编辑 `www/index.html`, 添加额外的 CSS 文件 `overrides.css`:
+
+```
+<link rel="stylesheet" type="text/css" href="css/overrides.css" />
+```
+
+* 可选创建一个空的`www/css/overrides.css`文件,应用于非 Android 的构建, 防止文件丢失的错误。
+
+* 在`merges/android` 下创建一个`css`子目录，再加入相应的`overrides.css`文件。在`www/css/index.css`中指定的字体大小，例如：
+
+```
+body { font-size:14px; }
+```
+
+在重构项目中，Android 版本采用了自定义字体大小，而其他的维持不变。
+
+还可以使用的`merges`来添加不存在于原始`www`目录中的文件。例如，一个应用程序可以将一个“后退按钮”图形插入iOS界面，存储在`merges/ios/img/back_button.png`，而 Android 版本，可以改为从相应的硬件按钮事件捕捉`[backbutton](../../cordova/events/events.backbutton.html)`。
+
+## 帮助命令
+
+遇到问题，请呼唤“帮助”。执行：
+
+```
+$ cordova help
+$ cordova        # same
+```
+
+此外，你可以得到一个更详细的帮助。 例如
+
+```
+$ cordova run --help
+```
+
+`info` 命令产生的潜在有用的信息，如当前已安装的平台和插件，每个平台 SDK 版本，CLI 和 Node.js的版本信息列表：
+
+```
+$ cordova info
+```
+
+它既在屏幕上展示信息，并输出到本地info.txt。
+
+**注：**目前，仅适用于 iOS 和 Android 平台的详细信息。
+
+## 更新 Cordova 和你的项目
+
+使用如下命令更新 `cordova`:
+
+```
+$ sudo npm update -g cordova
+```
+
+安装特定版本
+
+```
+$ sudo npm install -g cordova@3.1.0-0.2.0
+```
+
+运行`cordova -v`来查看当前运行的版本， to see which version is currently running. 运行 `npm info` 来获取当前版本以及可用版本的信息:
+
+```
+$ npm info cordova
+```
+
+Cordova 3.0 是支持本节所述的命令行界面的第一个版本。如果您是从之前的版本更新到 3.0，则需要如上所述创建一个新的项目，那么旧的应用程序的资源复制到顶层`www`目录。有关升级到 3.0 的进一步的细节，参考[平台开发指南](../docs/platforms.md)。一旦您升级到`cordova` 的命令行界面，并使用 `npm update` 保持同步。
+
+Cordova 3.0+ 可能仍然会有各种变化，包括项目级目录结构和其他依赖。在运行 `npm `命令来更新 Cordova 本身后，你可能需要确保项目的资源是符合最新版本的要求。运行命令，如下：
+
+```
+$ cordova platform update android
+$ cordova platform update ios
+...etc.
+```
