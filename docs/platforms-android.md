@@ -47,11 +47,11 @@ Android sdk 没有提供默认的模拟器，需要自己配置。命令行运�
 
 此时，AVD 将出现在 Android Virtual Devices 列表中：
 
-![](../images/android/asdk_avds.png）
+![](../images/android/asdk_avds.png)
 
 打开模拟器，选择 AVD 并点击 Start。
 
-![](../images/android/asdk_emulator.png）
+![](../images/android/asdk_emulator.png)
 
 使用`Virtual Machine Acceleration`可以加速虚拟机，获得更好的体验。先确认你的系统是否支持如下该技术：
 
