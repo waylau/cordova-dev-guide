@@ -5,7 +5,6 @@ This is the summary of my book.
 * [快速开始](docs/getstarted.md)
 * [概述](docs/overview.md)
 * [命令行界面（CLI）](docs/cli.md)
-* [平台支持](docs/support.md)
 * [平台开发指南](docs/platforms.md)
     * Amazon Fire OS
     * Android

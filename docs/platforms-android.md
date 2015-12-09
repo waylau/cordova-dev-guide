@@ -85,7 +85,7 @@ Windows 环境下，另外一个查找 Intel 处理器支持 VT-x 技术，是�
 创建项目可以是选择 CLI 或者是 Android 特有的 shell 工具。使用 CLI 如下：
 
 ```
-$ cordova create hello com.example.hello HelloWorld
+$ cordova create hello com.waylau.cordova.hello HelloWorld
 $ cd hello
 $ cordova platform add android
 $ ccordova prepare              # or "cordova build"
@@ -94,8 +94,8 @@ $ ccordova prepare              # or "cordova build"
 Unix 、Windows 环境下，使用低级别的 shell 工具:
 
 ```
-$ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
-C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
+$ /path/to/cordova-android/bin/create /path/to/new/hello com.waylau.cordova.hello HelloWorld
+C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.waylau.cordova.hello HelloWorld
 ```
 
 ## 构建项目
