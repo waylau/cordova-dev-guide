@@ -10,6 +10,10 @@ This is the summary of my book.
     * Android
         * [Android 平台](docs/platforms-android.md)
         * [Android shell 工具](docs/platforms-android-tools.md)
+	* [Android 配置](docs/platforms-android-config.md)
+	* [Android 插件](docs/platforms-android-plugin.md)
+	* [Android WebViews](docs/platforms-android-webview.md)
+	* [Android 升级](docs/platforms-android-upgrade.md)
     * BlackBerry 10
     * Firefox OS
     * iOS
@@ -19,4 +23,5 @@ This is the summary of my book.
 * [嵌入 WebViews](docs/webviews.md)
 * [插件开发指南](docs/hybrid-plugins.md)
 * [使用 Plugman 来管理插件](docs/plugman.md)
+* [config.xml 文件](docs/config_ref.md)
 * To be continued ...未完待续...
