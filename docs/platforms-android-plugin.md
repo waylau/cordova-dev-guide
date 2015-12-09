@@ -1,48 +1,12 @@
----
-license: >
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+Android Plugins
+====
 
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
-
-title: Android Plugins
----
-
-# Android Plugins
-
-This section provides details for how to implement native plugin code
-on the Android platform. Before reading this, see Application Plugins
-for an overview of the plugin's structure and its common JavaScript
-interface. This section continues to demonstrate the sample _echo_
-plugin that communicates from the Cordova webview to the native
-platform and back.  For another sample, see also the comments in
+本节详细介绍了如何在 Android 平台上的实现原生插件代码。在读这篇文章前，请参阅应用程序插件关于插件的结构和共同的 JavaScript 接口的概述。本节展示“回声”插件示例，来实现 Cordova webview 与原生平台的通信交互。该示例也可见
 [CordovaPlugin.java](https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java).
 
-Android plugins are based on Cordova-Android, which consists of an
-Android WebView with hooks attached to it.  Plugins are represented as
-class mappings in the `config.xml` file.  A plugin consists of at
-least one Java class that extends the `CordovaPlugin` class,
-overriding one of its `execute` methods. As best practice, the plugin
-should also handle `[pause](../../../cordova/events/events.pause.html)` and `[resume](../../../cordova/events/events.resume.html)` events, along with any message
-passing between plugins.  Plugins with long-running requests,
-background activity such as media playback, listeners, or internal
-state should implement the `onReset()` method as well. It executes
-when the `WebView` navigates to a new page or refreshes, which reloads
-the JavaScript.
+基于 Cordova-Android 的 Android 插件，是 Android 的 WebView 与连接到其挂钩。插件被表示为在 config.xml 文件类的映射。一个插件至少有一个Java类，是继承了 CordovaPlugin 类，覆盖它的 `execute`方法之一。作为最佳实践，该插件还应该处理任何消息的插件之间传递的`[pause](../../../cordova/events/events.pause.html)` 和 `[resume](../../../cordova/events/events.resume.html)` 事件。插件长时间运行的请求，后台活动，如媒体播放，监听器，或内部状态应该实现 `onReset()`方法为好。它在 `WebView` 导航到新页面或刷新时执行，从而重新加载 JavaScript。
 
-## Plugin Class Mapping
+## Plugin 类 映射
 
 The plugin's JavaScript interface uses the `cordova.exec` method as
 follows:
