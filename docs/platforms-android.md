@@ -1,4 +1,4 @@
-Android
+Android 平台
 ====
 
 本文将介绍了如何设置 SDK 环境来部署 Cordova 应用到 Android 设备上，以及在你的开发流程中如何选择使用 Android 命令行工具。不管你是以平台为中心的工作流程还是跨平台（命令行界面）的工作流程都需要安装 Android SDK。
