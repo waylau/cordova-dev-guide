@@ -171,11 +171,11 @@ C:\path\to\project\cordova\clean.bat
 1. 启动  Android Studio
 2. 选择  Import Project (Eclipse ADT, Gradle, etc)
 
-![](../images/android/asdk_import_project.png）
+![](../images/android/asdk_import_project.png)
 
 3. 选择 android 平台存储的位置 (`your/project/platforms/android`)
 
-![](../images/android/asdk_import_select_location.png）
+![](../images/android/asdk_import_select_location.png)
 
 4. `Gradle Sync` 的问题，直接回答 Yes
 
