@@ -9,6 +9,7 @@ This is the summary of my book.
     * Amazon Fire OS
     * Android
         * [Android 平台](docs/platforms-android.md)
+	* [Android shell 工具](docs/platforms-android-tools.md)
     * BlackBerry 10
     * Firefox OS
     * iOS
