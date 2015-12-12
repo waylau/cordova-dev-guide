@@ -1,37 +1,9 @@
----
-license: >
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+Android WebViews
+====
 
-        http://www.apache.org/licenses/LICENSE-2.0
+本文演示了如何在大型 Android 应用里面，内嵌 Cordova-enabled WebView 组件。欲了解组件之间如何交互，参见[插件开发指南](../docs/hybrid-plugins.md)。
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
-
-title: Android WebViews
----
-
-# Android WebViews
-
-This guide shows how to embed a Cordova-enabled WebView component
-within a larger Android application. For details on how these
-components can communicate with each other, see Application Plugins.
-
-If you're unfamiliar with Android, you should first familiarize
-yourself with the [Android Platform Guide](index.html) and have the latest Android
-SDK installed before you attempt the more unusual development option
-of embedding a WebView.  Starting with Cordova 1.9, the Android
-platform relies on a `CordovaWebView` component, which builds on a
-legacy `CordovaActivity` component that pre-dates the 1.9 release.
+若你对 Android 还不熟悉，可以先参考[Android 平台](docs/platforms-android.md)，并安装 Android SDK。 Cordova 1.9 开始, Android 平台依赖`CordovaWebView` 组件,该组件是基于 `CordovaActivity`组件构建的。
 
 1. To follow these instructions, make sure you have the latest Cordova
    distribution. Download it from
