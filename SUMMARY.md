@@ -24,4 +24,5 @@ This is the summary of my book.
 * [插件开发指南](docs/hybrid-plugins.md)
 * [使用 Plugman 来管理插件](docs/plugman.md)
 * [config.xml 文件](docs/config_ref.md)
+* [附录](docs/appendix.md)
 * To be continued ...未完待续...
