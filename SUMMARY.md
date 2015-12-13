@@ -10,10 +10,10 @@ This is the summary of my book.
     * Android
         * [Android 平台](docs/platforms-android.md)
         * [Android shell 工具](docs/platforms-android-tools.md)
-	* [Android 配置](docs/platforms-android-config.md)
-	* [Android 插件](docs/platforms-android-plugin.md)
-	* [Android WebViews](docs/platforms-android-webview.md)
-	* [Android 升级](docs/platforms-android-upgrade.md)
+        * [Android 配置](docs/platforms-android-config.md)
+        * [Android 插件](docs/platforms-android-plugin.md)
+        * [Android WebViews](docs/platforms-android-webview.md)
+        * [Android 升级](docs/platforms-android-upgrade.md)
     * BlackBerry 10
     * Firefox OS
     * iOS
