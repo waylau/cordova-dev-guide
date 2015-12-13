@@ -5,33 +5,21 @@ Android WebViews
 
 若你对 Android 还不熟悉，可以先参考[Android 平台](docs/platforms-android.md)，并安装 Android SDK。 Cordova 1.9 开始, Android 平台依赖`CordovaWebView` 组件,该组件是基于 `CordovaActivity`组件构建的。
 
-1. To follow these instructions, make sure you have the latest Cordova
-   distribution. Download it from
-   [cordova.apache.org](http://cordova.apache.org) and unzip its
-   Android package.
+1. 首先确保有最新的 Cordova 的发布包，从  [cordova.apache.org](http://cordova.apache.org) 下载，并解压  Android 包。
 
-1. Navigate to the Android package's `/framework` directory and run
-   `ant jar`. It creates the Cordova `.jar` file, formed as
-   `/framework/cordova-x.x.x.jar`.
+1. 切换到 Android 包的 `/framework` 目录，并运行 `ant jar`，它将创建 Cordova `.jar` 文件，格式如 `/framework/cordova-x.x.x.jar`
 
-1. Copy the `.jar` file into the Android project's `/libs` directory.
+1. 拷贝 `.jar` 文件到 Android 项目的`/libs` 目录
 
-1. Add the following to the application's `/res/xml/main.xml` file,
-   with the `layout_height`, `layout_width` and `id` modified to suit
-   the application:
+1. 添加如下 `/res/xml/main.xml` 文件,设置相应的 `layout_height`, `layout_width` 和 `id`:
 
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-1. Modify the activity so that it implements the `CordovaInterface`.
-   It should implement the included methods.  You may wish to copy
-   them from `/framework/src/org/apache/cordova/CordovaActivity.java`,
-   or else implement them on your own.  The following code fragment
-   shows a basic application that relies on the interface. Note how
-   the referenced view id matches the `id` attribute specified in the
-   XML fragment shown above:
+1. 修改 activity 让其实现 `CordovaInterface`，它会实现包含的方法。可以拷贝自 `/framework/src/org/apache/cordova/CordovaActivity.java`,
+  或者自己实现。下面的代码片段显示，依赖于接口上的基本应用。请注意引用视图 `id` 与上面显示的 XML 片段指定的id属性如何相匹配:
 
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -45,8 +33,7 @@ Android WebViews
                 cwv.loadUrl(Config.getStartUrl());
             }
 
-1. If the application needs to use the camera, implement the
-   following:
+1. 若应用使用了摄像头，用法如下:
 
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
@@ -91,16 +78,13 @@ Android WebViews
             }
         }
 
-1. Finally, remember to add the thread pool, otherwise plugins
-   have no threads on which to run:
+1. 最后，添加线程池，除非插件没有线程来运行:
 
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
 
-1. Copy the application's HTML and JavaScript files to the Android
-   project's `/assets/www` directory.
+1. 拷贝应用的 HTML 和 JavaScript 文件到 Android 项目的 `/assets/www` 目录
 
-1. Copy the `config.xml` file from `/framework/res/xml` to the
-   project's `/res/xml` directory.
+1. 从 `/framework/res/xml` 拷贝 `config.xml` 文件到 `/res/xml` 目录
